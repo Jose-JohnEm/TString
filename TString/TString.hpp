@@ -3,6 +3,9 @@
 
 #include <vector>
 #include <string>
+#include <algorithm>
+
+#include "Exception.hpp"
 
 namespace JDK
 {

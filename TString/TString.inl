@@ -10,6 +10,9 @@ inline std::vector<std::string> &JDK::TString::getDefinedLanguages()
 
 inline void JDK::TString::setLanguage(const std::string &language)
 {
+    if (std::find(_availableLanguages.begin(), _availableLanguages.end(), language) == _availableLanguages.end())
+        throw Exception("TString", language + " is not available");
+
     _chosenLanguage = language;
 }
 
