@@ -20,3 +20,8 @@ inline const std::string &JDK::TString::getChosenLanguage()
 {
     return _chosenLanguage;
 }
+
+inline std::string JDK::TString::get() const
+{
+    return _texts.at(JDK::TString::getChosenLanguage());
+}
